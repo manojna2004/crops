@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Farm Sales Prediction - Result</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(/static/image/wheat\ image.jpg);
+            .button {
+                padding: 10px 20px;
+                background-color: #48921d; /* Set your desired background color */
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none
+                }
+                   }
+    </style>
+    <div class="container">
+        <h1 align="center">Farm Sales Prediction - Result</h1>
+        
+        {% if prediction is defined %}
+            <div class="result">
+                <p align="center">Predicted Sales: {{ prediction }}</p>
+            </div>
+        {% else %}
+            <div class="result">
+                <p>No prediction available.</p>
+            </div>
+        {% endif %}
+
+        <center><button><a href="/">Go back to the home page</a></center></button>
+    </div>
+</body>
+</html>

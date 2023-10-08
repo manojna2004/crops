@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Farm Sales Prediction</title>
+</head>
+<body>
+    <img src="C:\Users\bharg\OneDrive\Desktop\Crop sale prediction\static\image.jpg">
+    <style>
+        body{
+            background-image: url(/static/image/wheat\ image.jpg);
+        }
+    </style>
+    <div class="container">
+        <h1 align="center">Farm Sales Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="weather"><b>Temperature:</b></label>
+            <input type="text" name="weather" required>
+
+            <label for="crop"><b>Crop:</b></label>
+            <input type="text" name="crop" required>
+
+            <label for="season"><b>Season:</b></label>
+            <input type="text" name="season" required>
+
+            <label for="previous_sales"><b>Previous Sales:</b></label>
+            <input type="number"  name="previous_sales" required>
+<br>
+<br>
+            <center><button type="submit">Predict</button></center>
+        </form>
+    </div>
+</body>
+</html>
